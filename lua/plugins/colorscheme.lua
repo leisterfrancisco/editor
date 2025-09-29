@@ -1,5 +1,12 @@
 return {
-  { "olimorris/onedarkpro.nvim" },
+  {
+    "olimorris/onedarkpro.nvim",
+    opts = {
+      colors = {
+        onedark = { bg = "#24272e" }, -- your custom bg
+      },
+    },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
@@ -7,16 +14,26 @@ return {
     },
   },
   {
-    "projekt0n/github-nvim-theme",
-    name = "github-theme",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      require("github-theme").setup({
-        -- ...
-      })
-
-      vim.cmd("colorscheme github_dark")
-    end,
+    "tiagovla/tokyodark.nvim",
+    opts = {
+      -- custom options here
+    },
+    -- config = function(_, opts)
+    -- require("tokyodark").setup(opts) -- calling setup is optional
+    -- vim.cmd([[colorscheme tokyodark]])
+    -- end,
   },
+  -- {
+  --   "projekt0n/github-nvim-theme",
+  --   name = "github-theme",
+  --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  --   priority = 1000, -- make sure to load this before all the other start plugins
+  --   config = function()
+  --     require("github-theme").setup({
+  --       -- ...
+  --     })
+  --
+  --     vim.cmd("colorscheme github_dark")
+  --   end,
+  -- },
 }
