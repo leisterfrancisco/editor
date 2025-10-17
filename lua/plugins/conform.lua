@@ -10,6 +10,8 @@ return {
       cpp = { "clang-format" },
       c = { "clang-format" },
       solidity = { "prettier" },
+      php = { "pint" },
+      blade = { "blade-formatter" },
     },
   },
 }
